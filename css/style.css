@@ -6,16 +6,10 @@
     border: 0;
     box-sizing: border-box;
 }
-.navigation-container {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-}
 header {
     height: 5vh;
     margin: auto;
 }
-
 footer {
     display: flex;
     flex-wrap: wrap;
@@ -50,12 +44,22 @@ footer {
     text-decoration: none;
     color: black;
 }
-.menu-container {
+
+.logo {
+    text-decoration: none;
+    color: black;
+    font-size: 24px;
+    font-style: "Playfair Display";
+}
+.menu {
     clear: both;
     text-align: center;
-    display: none;
+    max-height: 0;
     transition: max-height .2s ease-out;
 }
+/* Mobile friendly menu that must */
+/* turn up when clicking on the */
+/* burger menu */
 .mobilemenu {
     display: none;
     clear: both;
@@ -63,25 +67,36 @@ footer {
     max-height: 0;
     transition: max-height .2s ease-out;
 }
+
+
+/* Show burger icon to the far right */
+/* Change mouse cursor on hover from */
+/* arrow to hand with finger */
 .menu-icon {
     cursor: pointer;
     display: inline-block;
     float: right;
-    padding: 20px;
+    padding: 15px 20px;
     position: relative;
     user-select: none;
+    color: white;
 }
+
+
+/* Make beef in burger */
 .navicon {
-    background: #333;
+    background: black;
     display: block;
     height: 2px;
     position: relative;
     transition: background .2s ease-out;
     width: 18px;
 }
+
+/* Make bread top and bottom */
 .navicon:before,
 .navicon:after {
-    background: #333;
+    background: black;
     content: '';
     display: block;
     height: 100%;
@@ -89,29 +104,168 @@ footer {
     transition: all .2s ease-out;
     width: 100%;
 }
+
 .navicon:before {
     top: 5px;
 }
+
 .navicon:after {
     top: -5px;
 }
+
+/* End of bread making */
+
+/* ---- Menu Button ---- */
+
+
+/* Do not show checkbox */
 .menu-btn {
     display: none;
-    float: right;
 }
-.menu-btn:checked ~ .menu {
-    max-height: 240px;
+
+/* Show menu when you check button */
+.menu-btn:checked ~ .mobilemenu {
+    display: block;
+    max-height: 300px;
 }
+
+/* Animate button on click */
 .menu-btn:checked ~ .menu-icon .navicon {
     background: transparent;
 }
+
 .menu-btn:checked ~ .menu-icon .navicon:before {
     transform: rotate(-45deg);
 }
+
 .menu-btn:checked ~ .menu-icon .navicon:after {
     transform: rotate(45deg);
 }
+
 .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:before,
 .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after {
     top: 0;
+}
+
+/* End button animation */
+.nav_link {
+    display: block;
+    color: #000000;
+    text-align: center;
+    color: white;
+    font-size: 18px;
+    background-color: #38c8bc;
+    text-align: center;
+    padding: 13px;
+    text-decoration: none;
+}
+
+.navigation_container {
+    background-color: #ffffff;
+    position: fixed;
+    width: 100%;
+    z-index: 3;
+    top: 0;
+    left: 0;
+    height: 40px;
+    border-bottom: solid 1px black;
+}
+
+.menu {
+    list-style: none;
+    overflow: hidden;
+    margin-top: 1px;
+    margin-bottom: 2px;
+}
+
+.menu_item {
+    font-size: 12px;
+    padding: 5px 5px 5px 20px;
+}
+/* Navbar container */
+.navbar {
+    overflow: hidden;
+    z-index: 1000;
+}
+
+/* The dropdown container */
+.dropdown {
+    float: left;
+    overflow: hidden;
+}
+
+/* Dropdown button */
+.dropdown .dropbtn {
+    font-size: 16px;
+    border: none;
+    outline: none;
+    color: white;
+    padding: 14px 16px;
+    background-color: #38c8bc;
+    font-family: inherit;
+    /* Important for vertical align on mobile phones */
+    margin: 0;
+    /* Important for vertical align on mobile phones */
+}
+
+/* Add a red background color to navbar links on hover */
+.navbar a:hover,
+.dropdown:hover .dropbtn {
+    background-color: white;
+    color: black;
+}
+
+/* Dropdown content (hidden by default) */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: black;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+    float: none;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: center;
+    color: white;
+    border: white solid 1px;
+}
+/* Add a white background color to dropdown links on hover */
+.dropdown-content a:hover {
+    background-color: white;
+    color: black;
+}
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+@media only screen and (min-width: 1037px) {
+
+    /* Menu on wide screen */
+    .menu_item {
+        float: left;
+    }
+
+    .menu {
+        clear: none;
+        float: right;
+        max-height: none;
+        margin-top: 7px;
+    }
+    .mobilemenu {
+        clear: none;
+        float: right;
+        max-height: none;
+    }
+    .menu-icon {
+        display: none;
+    }
+
 }

@@ -8,23 +8,29 @@
     <link rel="stylesheet" href="css/index.css">
     </head>
 <body>
-    <header>
-        <nav class="navigation-container">
-            <div class="logo-container">
-                <h1 class="logo">SoMeMag</h1>
-            </div>
-            <div class="utilities-container">
-                <button>Subscribe</button>
-                <button type="submit" class="search-button">Search</button>
-            </div>
-        </nav>
-
-        <nav class="menu-container">
-            <a href="#" class="navigation-item">Articles</a>
-            <a href="#" class="navigation-item">Entertainment</a>
-            <a href="#" class="navigation-item">Tips &amp; Tricks</a>
-        </nav>
-    </header>
+     <header class="header_container">
+            <nav class="navigation_container">
+                <span class="logo-container"><a href="../index.html" class="logo">SoMeMag</a></span>
+                <input class="menu-btn" type="checkbox" id="menu-btn">
+                    <label class="menu-icon" for="menu-btn"><span class="navicon"></span></label>
+                <div class="menu navbar">
+                    <div class="dropdown">
+                        <a href="subpages/articles.html" class="nav_link">Articles</a>
+                    </div>
+                    <div class="dropdown">
+                        <a href="subpages/entertainment.html" class="nav_link">Entertainment</a>
+                    </div>
+                    <div class="dropdown">
+                        <a href="subpages/tips&tricks.html" class="nav_link">Tips &amp; Tricks</a>
+                    </div>
+                </div>
+                    <ul class="mobilemenu">
+                        <li><a href="subpages/articles.html" class="nav_link">Articles</a></li>
+                        <li><a href="subpages/entertainment.html" class="nav_link">Entertainment</a></li>
+                        <li><a href="subpages/tips&tricks.html" class="nav_link">Tips &amp; Tricks</a></li>
+                    </ul>
+            </nav>
+        </header>
     <main>
         <div class="banner-container">
             <img src="images/twitter-292994_1920.jpg" class="banner-image">

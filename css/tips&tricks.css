@@ -1,0 +1,7 @@
+.tip-container {
+    margin: 15px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    border: solid 1px black;
+}
