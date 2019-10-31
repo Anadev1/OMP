@@ -1,0 +1,43 @@
+
+.article-title {
+    font-family: "Playfair Display";
+    font-size: 32px;
+}
+.article-byline {
+    font-family: "Playfair Display";
+}
+.article-subtitle{
+    font-family: "Playfair Display";
+    margin-top: 50px;
+    margin-bottom: 25px;
+}
+.article-description {
+    margin-top: 50px;
+    font-family: Roboto;
+    font-style: italic;
+}
+.article-text {
+    font-family: Roboto;
+}
+.sidebox-container {
+    font-family: Roboto;
+    border: solid 1px black;
+    padding: 25px;
+}
+ol {
+    margin: 5px;
+}
+@media only screen and (min-width: 1037px) {
+    main {
+        width: 50%;
+        margin: 30px auto;
+    }
+    .list-article {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .list-article-text {
+        width: 550px;
+    }
+}
