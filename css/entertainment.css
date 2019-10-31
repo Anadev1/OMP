@@ -4,3 +4,9 @@
 .video-description {
     text-align: center;
 }
+@media only screen and (min-width: 1037px) {
+    main {
+        width: 50%;
+        margin: 30px auto;
+    }
+}

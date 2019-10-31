@@ -12,50 +12,53 @@ header {
 }
 footer {
     display: flex;
-    flex-wrap: wrap;
     flex-direction: column;
     text-align: center;
 }
 .somelinks-container {
     display: flex;
     flex-direction: column;
-    padding: 10px 15px;
+    padding: 10px;
     background-color: black;
     color: white;
+    font-family: "Playfair Display";
 }
 .contactus-container {
-    padding: 10px 15px;
+    padding: 10px;
     background-color: black;
     color: white;
 }
 .contactus-title {
     font-size: 24px;
+    font-family: "Playfair Display";
 }
 .newsletter-container {
-    padding: 10px 15px;
     background-color: black;
     color: white;
+    padding: 10px;
 }
 .somelink {
     text-decoration: none;
     color: white;
+    margin: 15px;
 }
 .link {
     text-decoration: none;
     color: black;
 }
-
 .logo {
     text-decoration: none;
     color: black;
     font-size: 24px;
-    font-style: "Playfair Display";
+    font-family: "Playfair Display";
 }
 .menu {
     clear: both;
     text-align: center;
     max-height: 0;
     transition: max-height .2s ease-out;
+
+
 }
 /* Mobile friendly menu that must */
 /* turn up when clicking on the */
@@ -66,8 +69,8 @@ footer {
     text-align: center;
     max-height: 0;
     transition: max-height .2s ease-out;
-}
 
+}
 
 /* Show burger icon to the far right */
 /* Change mouse cursor on hover from */
@@ -81,8 +84,6 @@ footer {
     user-select: none;
     color: white;
 }
-
-
 /* Make beef in burger */
 .navicon {
     background: black;
@@ -92,7 +93,6 @@ footer {
     transition: background .2s ease-out;
     width: 18px;
 }
-
 /* Make bread top and bottom */
 .navicon:before,
 .navicon:after {
@@ -104,7 +104,6 @@ footer {
     transition: all .2s ease-out;
     width: 100%;
 }
-
 .navicon:before {
     top: 5px;
 }
@@ -117,38 +116,32 @@ footer {
 
 /* ---- Menu Button ---- */
 
-
 /* Do not show checkbox */
 .menu-btn {
     display: none;
 }
-
 /* Show menu when you check button */
 .menu-btn:checked ~ .mobilemenu {
     display: block;
     max-height: 300px;
 }
-
 /* Animate button on click */
 .menu-btn:checked ~ .menu-icon .navicon {
     background: transparent;
 }
-
 .menu-btn:checked ~ .menu-icon .navicon:before {
     transform: rotate(-45deg);
 }
-
 .menu-btn:checked ~ .menu-icon .navicon:after {
     transform: rotate(45deg);
 }
-
 .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:before,
 .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after {
     top: 0;
 }
 
 /* End button animation */
-.nav_link {
+.nav-link {
     display: block;
     color: #000000;
     text-align: center;
@@ -158,8 +151,15 @@ footer {
     text-align: center;
     padding: 13px;
     text-decoration: none;
+    font-family: "Playfair Display";
 }
-
+.menu-link {
+    text-decoration: none;
+    color: black;
+    font-size: 24px;
+    margin-left: 25px;
+    font-family: "Playfair Display";
+}
 .navigation_container {
     background-color: #ffffff;
     position: fixed;
@@ -168,7 +168,6 @@ footer {
     top: 0;
     left: 0;
     height: 40px;
-    border-bottom: solid 1px black;
 }
 
 .menu {
@@ -181,13 +180,8 @@ footer {
 .menu_item {
     font-size: 12px;
     padding: 5px 5px 5px 20px;
+    font-family: "Playfair Display";
 }
-/* Navbar container */
-.navbar {
-    overflow: hidden;
-    z-index: 1000;
-}
-
 /* The dropdown container */
 .dropdown {
     float: left;
@@ -207,14 +201,6 @@ footer {
     margin: 0;
     /* Important for vertical align on mobile phones */
 }
-
-/* Add a red background color to navbar links on hover */
-.navbar a:hover,
-.dropdown:hover .dropbtn {
-    background-color: white;
-    color: black;
-}
-
 /* Dropdown content (hidden by default) */
 .dropdown-content {
     display: none;
@@ -246,18 +232,95 @@ footer {
     display: block;
 }
 
-@media only screen and (min-width: 1037px) {
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay on top always */
+    z-index: 1; /* Stay on top always */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full screen width */
+    height: 100%; /*Full screen height */
+    background-color: rgba(0,0,0,0.4); /*Black w/ opacity */
+}
 
+.modal-content {
+    background-color: #fefefe;
+    margin: 10% auto 15% auto;
+    padding: 25px;
+    border: 1px solid #888888;
+    width: 100%; /* More or less, depending on content and screen size */
+    height: 300px;
+    box-shadow: 6px 6px 6px rgba(0,0,0,-0.8);
+}
+
+.close {
+    float: right;
+    margin-right: 10px;
+    color: #000000;
+    font-size: 35px;
+    font-weight: bold;
+}
+
+.close:hover {
+    color: red;
+    cursor: pointer;
+}
+
+.animate {
+    animation: animatezoom 0.6s; /* call animatezoom keyframes */
+}
+
+@keyframes animatezoom {
+    from {margin-left: 100%}
+    to {margin-left: 0%}
+}
+
+@keyframes animatezoom {
+    from {transform: scale(0)}
+    to {transform: scale(1)}
+}
+
+.details-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.input-container {
+    margin: 15px 0;
+    border: solid 1px black;
+    padding: 5px;
+}
+.newsletter-container {
+    background-color: #000000;
+}
+.newsletter-button {
+    background-color: #38c8bc;
+    padding: 10px;
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: bold;
+    font-family: "Playfair Display";
+}
+.subscribe-button {
+    padding: 5px;
+    margin-top: 10px;
+    background-color: #ffffff;
+    border: solid 1px black;
+}
+
+@media only screen and (min-width: 1037px) {
     /* Menu on wide screen */
     .menu_item {
         float: left;
     }
-
     .menu {
         clear: none;
-        float: right;
         max-height: none;
-        margin-top: 7px;
+        padding: 5px;
+        text-align: center;
+        border-top: solid 1px black;
+        border-bottom: solid 1px black;
     }
     .mobilemenu {
         clear: none;
@@ -267,5 +330,19 @@ footer {
     .menu-icon {
         display: none;
     }
-
+    header {
+        height: 6.5vh;
+        margin: auto;
+    }
+   .navigation_container {
+        height: 76px;
+    }
+    footer {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        background-color: #000000;
+        align-items: center;
+    }
 }

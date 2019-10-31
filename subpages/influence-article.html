@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <title>SoMeMag | Social media's influence on wellbeing</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://kit.fontawesome.com/6a331c31d1.js"></script>
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/influence-article.css">
 </head>
@@ -15,27 +16,26 @@
                 <span class="logo-container"><a href="../index.html" class="logo">SoMeMag</a></span>
                 <input class="menu-btn" type="checkbox" id="menu-btn">
                     <label class="menu-icon" for="menu-btn"><span class="navicon"></span></label>
-                <div class="menu navbar">
-                    <div class="dropdown">
-                        <a href="articles.html" class="nav_link">Articles</a>
-                    </div>
-                    <div class="dropdown">
-                        <a href="entertainment.html" class="nav_link">Entertainment</a>
-                    </div>
-                    <div class="dropdown">
-                        <a href="tips&tricks.html" class="nav_link">Tips &amp; Tricks</a>
-                    </div>
-                </div>
+
                     <ul class="mobilemenu">
                         <li><a href="articles.html" class="nav_link">Articles</a></li>
                         <li><a href="entertainment.html" class="nav_link">Entertainment</a></li>
                         <li><a href="tips&tricks.html" class="nav_link">Tips &amp; Tricks</a></li>
                     </ul>
-
+                <div class="menu navbar">
+                    <a href="articles.html" class="menu-link">Articles</a>
+                    <a href="entertainment.html" class="menu-link">Entertainment</a>
+                    <a href="tips&tricks.html" class="menu-link">Tips &amp; Tricks</a>
+            </div>
             </nav>
         </header>
         <main>
-
+            <article class="article-container">
+                <header>
+                    <h1 class="article-title">Social media is sooo meee!</h1>
+                    <p class="byline">By Ana-Maria Iacovache</p>
+                </header>
+            </article>
         </main>
         <footer>
             <div class="contactus-container">
@@ -43,16 +43,35 @@
                 <p>If you want to contact us you can do it by email at anaiacovache@gmail.com or on the social media accounts available.</p>
             </div>
             <div class="newsletter-container">
-                <button>Subscribe to newsletter</button>
-            </div>
-            <div class="somelinks-container">
-                <a href="#" class="somelink">Facebook</a>
-                <a href="#" class="somelink">Instagram</a>
-                <a href="#" class="somelink">Snapchat</a>
-                <a href="#" class="somelink">Twitter</a>
-                <a href="#" class="somelink">LinkedIn</a>
-                <a href="#" class="somelink">YouTube</a>
+            <button type="button" class="newsletter-button" onclick="document.getElementById('modal_id').style.display='block';">Subscribe to newsletter</button>
+        </div>
+             <div class="somelinks-container">
+                <div><i class="fab fa-facebook"></i><a href="#" class="somelink">Facebook</a></div>
+                <div><i class="fab fa-instagram"></i> <a href="#" class="somelink">Instagram</a></div>
+                <div><i class="fab fa-snapchat"></i> <a href="#" class="somelink">Snapchat</a></div>
+                <div><i class="fab fa-twitter"></i> <a href="#" class="somelink">Twitter</a></div>
+                <div><i class="fab fa-linkedin"></i> <a href="#" class="somelink">LinkedIn</a></div>
+                <div><i class="fab fa-youtube"></i> <a href="#" class="somelink">YouTube</a></div>
             </div>
         </footer>
+        <div id="modal_id" class="modal animate">
+
+        <div class="modal-content">
+            <span onclick="document.getElementById('modal_id').style.display='none';" class="close">&times;</span>
+            <h1 class="newsletter-title">Subscribe for the latest news</h1>
+            <form class="newsletter-container">
+                <div class="details-container">
+                    <input type="text" class="input-container" placeholder="Name"  name="name" required>
+                    <input type="text" class="input-container" placeholder="Email" name="mail" required>
+                    <label>
+                        <input type="checkbox" checked="checked" name="subscribe" > I want to receive news from the magazine.
+                    </label>
+                </div>
+                <div>
+                    <input type="submit" value="Subscribe" class="subscribe-button">
+                </div>
+            </form>
+        </div>
+    </div>
 </body>
 </html>
