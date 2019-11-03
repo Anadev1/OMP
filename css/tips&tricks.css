@@ -9,6 +9,9 @@
 .tip-image {
     margin: 15px;
 }
+.tip-text {
+    margin: 15px;
+}
 @media only screen and (min-width: 1037px) {
     main {
         width: 50%;
