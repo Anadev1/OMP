@@ -26,7 +26,10 @@ main {
     border: solid 1px black;
     border-radius: 20px;
     color: black;
-    font-family: "Playfair Display"
+    font-family: "Playfair Display";
+}
+.credits {
+    font-size: 12px;
 }
 @media only screen and (min-width: 1037px) {
 
