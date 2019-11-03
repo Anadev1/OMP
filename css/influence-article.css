@@ -1,4 +1,6 @@
-
+.article-header {
+    height: 100px;
+}
 .article-title {
     font-family: "Playfair Display";
     font-size: 32px;
@@ -24,9 +26,19 @@
     border: solid 1px black;
     padding: 25px;
 }
+.article-container {
+    margin: 20px 25px;
+}
 ol {
     margin: 5px;
 }
+.influence-article-image {
+    width: 100%;
+}
+.article-image-description {
+        font-size: 12px;
+        width: 100%;
+    }
 @media only screen and (min-width: 1037px) {
     main {
         width: 50%;
@@ -39,5 +51,15 @@ ol {
     }
     .list-article-text {
         width: 550px;
+        margin-right: 10px;
+    }
+    .influence-article-image {
+        width: 75%;
+        padding: 20px;
+    }
+    .article-image-description {
+        font-size: 14px;
+        width: 50%;
+        margin: 5px 25px;
     }
 }
