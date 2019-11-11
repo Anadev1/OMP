@@ -16,3 +16,30 @@
     margin: 15px;
     font-size: 24px;
 }
+
+@media only screen and (min-width: 300px) {
+
+    .banner-container {
+        background-image: url(../images/homepage-smartphone.jpg);
+    }
+}
+
+@media only screen and (min-width: 600px) {
+
+    .banner-container {
+        background-image: url(../images/homepage-tablet.jpg);
+    }
+}
+
+@media only screen and (min-width: 800px) {
+
+    .banner-container {
+        background-image: url(../images/homepage-laptop.jpg);
+    }
+}
+@media only screen and (min-width: 1100px) {
+
+    .banner-container {
+        background-image: url(../images/homepage-desktop.jpg);
+    }
+}
